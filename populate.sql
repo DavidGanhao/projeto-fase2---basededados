@@ -1,0 +1,285 @@
+use proj2;
+
+-- 1º distrito
+insert into distrito values('Aveiro',1);
+insert into distrito values('Beja',2);
+insert into distrito values('Braga',3);
+insert into distrito values('Bragança',4);
+insert into distrito values('Castelo Branco',5);
+insert into distrito values('Coimbra',6);
+insert into distrito values('Évora',7);
+insert into distrito values('Faro',8);
+insert into distrito values('Guarda',9);
+insert into distrito values('Leiria',10);
+insert into distrito values('Lisboa',11);
+insert into distrito values('Portalegre',12);
+insert into distrito values('Porto',13);
+insert into distrito values('Santarém',14);
+insert into distrito values('Setúbal',15);
+insert into distrito values('Viana do Castelo',16);
+insert into distrito values('Vila Real',17);
+insert into distrito values('Viseu',18);
+insert into distrito values('Angra do Heroísmo',19);
+insert into distrito values('Horta',20);
+insert into distrito values('Ponta Delgada',21);
+insert into distrito values('Funchal',22);
+-- 2º concelho
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Agueda',1,1);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Anadia',2,1);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Arouca',3,1);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Alvito',1,2);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Beja',2,2);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Serpa',3,2);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Braga',1,3);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Guimarâes',2,3);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Vila Verde',3,3);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Bragança',1,4);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Mirandela',2,4);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Vila Flor',3,4);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Castelo Branco',1,5);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Covilhã',2,5);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Fundão',3,5);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Coimbra',1,6);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Lousã',2,6);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Montemor-o-Velho',3,6);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Évora',1,7);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Mourão',2,7);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Vendas Novas',3,7);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Faro',1,8);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Loulé',2,8);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Silves',3,8);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Guarda',1,9);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Gouveia',2,9);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Seia',3,9);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Batalha',1,10);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Leiria',2,10);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Óbidos',3,10);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Cascais',1,11);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Lisboa',2,11);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Torres Vedras',3,11);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Campo Maior',1,12);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Portalegre',2,12);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Sousel',3,12);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Porto',1,13);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Baião',2,13);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Penafiel',3,13);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Tomar',1,14);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Santarém',2,14);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Coruche',3,14);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Almada',1,15);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Seixal',2,15);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Setúbal',3,15);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Caminha',1,16);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Ponte de Lima',2,16);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Viana do Castelo',3,16);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Chaves',1,17);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Vila Real',2,17);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Sabrosa',3,17);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Lamego',1,18);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Viseu',2,18);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Tondela',3,18);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Velas',1,19);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Angra do Heroísmo',2,19);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Vila praia da Vitória',3,19);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Horta',1,20);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Lajes das Flores',2,20);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Madalena',3,20);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Nordeste',1,21);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Lagoa',2,21);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Ponta Delgada',3,21);
+
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Funchal',1,22);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Santa Cruz',2,22);
+insert into concelho(conc_concelho,conc_codigo,conc_dist_codigo) values('Santana',3,22);
+-- 3º freguesia
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Agueda de cima',1,1,1);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Moita',1,2,1);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Vareza',1,3,1);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Alvito',1,1,2);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Beringel',1,2,2);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Pias',1,3,2);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Lamas',1,1,3);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Pinheiro',1,2,3);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Lage',1,3,3);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Coelhoso',1,1,4);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Carvalhais',1,2,4);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Sampaio',1,3,4);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Almaceda',1,1,5);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Ferro',1,2,5);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Telhado',1,3,5);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Santo António dos Olivais',1,1,6);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Serpins',1,2,6);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Pereira',1,3,6);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('S. Bento do Mato',1,1,7);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Luz',1,2,7);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Vendas Novas',1,3,7);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Montenegro',1,1,8);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Ameixal',1,2,8);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Silves',1,3,8);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Casal de cinza',1,1,9);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('S. Paio',1,2,9);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Sandomil',1,3,9);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Batalha',1,1,10);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Amor',1,2,10);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Vau',1,3,10);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Cascais e Estoril',1,1,11);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Ajuda',1,2,11);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Silveira',1,3,11);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('S. João Baptista',1,1,12);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Alegrete',1,2,12);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Sousel',1,3,12);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Bonfim',1,1,13);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Viariz',1,2,13);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Penafiel',1,3,13);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Paialvo',1,1,14);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Moçarria',1,2,14);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Branca',1,3,14);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Costa da Caparica',1,1,15);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Amora',1,2,15);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Sado',1,3,15);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Argela',1,1,16);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Calvelo',1,2,16);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Vila Franca',1,3,16);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Águas Frias',1,1,17);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Nogueira e Erminda',1,2,17);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Sabrosa',1,3,17);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Lazarim',1,1,18);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Rio de Loba',1,2,18);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Varzea da Serra',1,3,18);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Rosais',1,1,19);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Porto Judeu',1,2,19);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Cabo da Praia',1,3,19);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Cedros',1,1,20);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Mosteiro',1,2,20);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Madalena',1,3,20);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Achadinha',1,1,21);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Ribeira de Chã',1,2,21);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Ponta Delgada(S. José)',1,3,21);
+
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Funchal(Santa Luzia)',1,1,22);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('Santa Cruz',1,2,22);
+insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
+values('S. Jorge',1,3,22);
+-- 4º participante
+-- 5º atleta
+-- 6º certificados
+-- 7º treinador
+-- 8º equipa
+-- 9º organizador
+-- 10º modalidade
+-- 11º evento
+-- 12º EquipaEvento
+-- 13º provas
+-- 14º resultados
+-- 15º tipologia
+-- 16º caracteristicas
+-- 17º alojamento
+-- 18º caracaloj
+-- 19º serviços
+-- 20º produtos
+-- 21º compra

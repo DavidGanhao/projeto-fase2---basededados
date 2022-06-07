@@ -1,0 +1,24 @@
+FEITO Possui é mau nome para a relação entre Participante e alojamento
+FEITO Não é registado o IP onde se fez o registo do item do alojamento
+FEITO Alojamento não tem morada e faltam muitas características
+FEITO Alojamento-Características é de M:N
+FEITO Alojamento-Produtos/Serviços devia ser relação tripla e M:N. IP não fica no produto (ex: Router)
+FEITO Tipologia podia ser uma entidade
+FEITO É possível reservar um alojamento?
+NAO ENTENDI MUITO BEM Em Distrito+Concelho+Freguesia e código devia ser chave parcial
+FEITO Entidade produto está errada
+FEITO Evento: Não tem morada, localização, nome de responsável????  Um evento poderá não ter provas obrigatoriamente. Só as terá quando a primeira for criada.
+FEITO Explicar a relação entre Evento e Prova/Modalidade. Relação Prova-Modalidade ao contrário?
+FEITO "Localização na equipa? Não será no alojamento e nos locais das provas? Uma equipa pode estar alojada em diferentes localizações.
+FEITO O nome do atleta está na entidade atleta e não na realização do teste anti-doping.
+FEITO Participante-Atleta e treinador 1:1 com obrigatoriedades???? Não!!! "
+FEITO Onde está a função que os elementos desempenham na equipa?
+FEITO Onde estão os dados do organizador do evento?
+NAO PERCEBI OQ O STOR QUIS DIZER Os requisitos deveriam ser mais explícitos e, de preferência, numerados. R1…
+FEITO Teste Anti-Doping é fraca e a relação não é?
+FEITO Treinador Certificado devia ser M:N
+NAO VI NECESSIDADE DE HAVER ESTA RELAÇÃO Atleta-Prova. Só deveriam participar nas provas onde fizeram a inscrição.
+FEITO Algumas entidades sem chave/unique
+
+NOTAS : 
+TEMOS DE PENSAR CONSOANTE A ENTIDADE TESTES ANTI-DOPING(NECESSIDADE etc.)
