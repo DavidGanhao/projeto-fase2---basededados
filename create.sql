@@ -43,7 +43,7 @@ CREATE TABLE Tipologia
 
 CREATE TABLE Produto
 (
-  prod_nome VARCHAR(20) NOT NULL,
+  prod_nome VARCHAR(30) NOT NULL,
   PRIMARY KEY (prod_nome)
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE Serviço
 CREATE TABLE Características
 (
   carac_caracteristica VARCHAR(30) NOT NULL,
-  carac_code INT NOT NULL,
+  carac_code INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (carac_code)
 );
 
@@ -82,7 +82,7 @@ CREATE TABLE Modalidade
 
 CREATE TABLE Alojamento
 (
-  aloj_morada VARCHAR(30) NOT NULL,
+  aloj_morada VARCHAR(50) NOT NULL,
   aloj_localizacao VARCHAR(10) NOT NULL,
   aloj_area INT NOT NULL,
   aloj_tipol_tipologia VARCHAR(2) NOT NULL,
@@ -92,8 +92,7 @@ CREATE TABLE Alojamento
   PRIMARY KEY (aloj_morada),
   FOREIGN KEY (aloj_tipol_tipologia) REFERENCES Tipologia(tipol_tipologia),
   FOREIGN KEY (aloj_freg_codigo, aloj_conc_codigo, aloj_conc_dist_codigo) REFERENCES Freguesia(freg_codigo, freg_conc_codigo, freg_conc_dist_codigo),
-  UNIQUE (aloj_localizacao),
-  UNIQUE (aloj_freg_codigo, aloj_conc_codigo, aloj_conc_dist_codigo)
+  UNIQUE (aloj_localizacao)
 );
 
 CREATE TABLE Compra
@@ -101,7 +100,7 @@ CREATE TABLE Compra
   comp_ip VARCHAR(10) NOT NULL,
   comp_preco INT NOT NULL,
   comp_datadecompra DATE NOT NULL,
-  comp_prod_nome VARCHAR(20) NOT NULL,
+  comp_prod_nome VARCHAR(30) NOT NULL,
   comp_serv_fornecedor VARCHAR(20) NOT NULL,
   comp_aloj_morada VARCHAR(30) NOT NULL,
   PRIMARY KEY (comp_ip, comp_prod_nome, comp_serv_fornecedor, comp_aloj_morada),
@@ -116,7 +115,7 @@ CREATE TABLE Evento
   even_periodo VARCHAR(20) NOT NULL,
   even_nome VARCHAR(20) NOT NULL,
   even_morada VARCHAR(20) NOT NULL,
-  even_code INT NOT NULL,
+  even_code INT NOT NULL AUTO_INCREMENT,
   even_org_nome VARCHAR(20) NOT NULL,
   even_mod_code INT NOT NULL,
   PRIMARY KEY (even_code),
@@ -128,7 +127,7 @@ CREATE TABLE Evento
 CREATE TABLE Prova
 (
   prov_localizacao VARCHAR(10) NOT NULL,
-  prov_id INT NOT NULL,
+  prov_id INT NOT NULL AUTO_INCREMENT,
   prov_data DATE NOT NULL,
   prov_duracao INT NOT NULL,
   prov_even_code INT NOT NULL,
@@ -142,9 +141,9 @@ CREATE TABLE Prova
 
 CREATE TABLE CaracteristicasAloj
 (
-  caracaloj_aloj_morada VARCHAR(30) NOT NULL,
+  caracaloj_aloj_morada VARCHAR(50) NOT NULL,
   caracaloj_carac_code INT NOT NULL,
-  PRIMARY KEY (caracaloj_aloj_morada),
+  PRIMARY KEY (caracaloj_aloj_morada,caracaloj_carac_code),
   FOREIGN KEY (caracaloj_aloj_morada) REFERENCES Alojamento(aloj_morada),
   FOREIGN KEY (caracaloj_carac_code) REFERENCES Características(carac_code)
 );
@@ -162,7 +161,7 @@ CREATE TABLE Participante
 (
   par_sexo CHAR(1) NOT NULL,
   par_nome VARCHAR(30) NOT NULL,
-  par_id INT NOT NULL,
+  par_id INT NOT NULL AUTO_INCREMENT,
   par_dnsc DATE NOT NULL,
   par_aloj_morada VARCHAR(30),
   PRIMARY KEY (par_id),

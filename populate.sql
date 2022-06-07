@@ -265,21 +265,167 @@ insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_d
 values('Santa Cruz',1,2,22);
 insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
 values('S. Jorge',1,3,22);
--- 4º participante
--- 5º atleta
--- 6º certificados
--- 7º treinador
--- 8º equipa
--- 9º organizador
--- 10º modalidade
--- 11º evento
--- 12º EquipaEvento
--- 13º provas
--- 14º resultados
--- 15º tipologia
--- 16º caracteristicas
--- 17º alojamento
--- 18º caracaloj
--- 19º serviços
--- 20º produtos
--- 21º compra
+-- 4º tipologia
+select * from tipologia;
+insert into tipologia values("T0");
+insert into tipologia values("T1");
+insert into tipologia values("T2");
+insert into tipologia values("T3");
+insert into tipologia values("T4");
+insert into tipologia values("T5");
+insert into tipologia values("T6");
+insert into tipologia values("T7");
+insert into tipologia values("T8");
+insert into tipologia values("T9");
+insert into tipologia values("V1");
+insert into tipologia values("V2");
+insert into tipologia values("V3");
+insert into tipologia values("V4");
+insert into tipologia values("V5");
+insert into tipologia values("V6");
+insert into tipologia values("V7");
+insert into tipologia values("V8");
+insert into tipologia values("V9");
+-- 5º caracteristicas
+select * from características;
+insert into características(carac_caracteristica) values('Estado novo');
+insert into características(carac_caracteristica) values('Estado usado');
+insert into características(carac_caracteristica) values('Estado danificado');
+insert into características(carac_caracteristica) values('Possui quintal');
+insert into características(carac_caracteristica) values('Possui terraço');
+insert into características(carac_caracteristica) values('Possui piscina');
+insert into características(carac_caracteristica) values('Possui garagem');
+insert into características(carac_caracteristica) values('Possui jacuzi');
+insert into características(carac_caracteristica) values('Possui uma casa de banho');
+insert into características(carac_caracteristica) values('Possui duas casas de banho');
+insert into características(carac_caracteristica) values('Junto de transportes públicos');
+insert into características(carac_caracteristica) values('Junto de praias');
+insert into características(carac_caracteristica) values('Zona calma');
+insert into características(carac_caracteristica) values('Zona movimentada');
+insert into características(carac_caracteristica) values('Zona comercial');
+-- 6º alojamento
+select * from alojamento;
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua das Flores, Nº2, 3ºD','10.3/32.5',100,'T2',1,2,2);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua das Flores, Nº5, 1ºE','10.5/32.5',110,'T1',1,2,2);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Praceta José Amaral, Nº20, R/C','31.6/20.5',400,'V2',1,1,15);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua Maria dos Santos, Nº2, 2ºE','11.5/80.2',110,'T0',1,2,12);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua dos Anjos, Nº45, 6ºF','1.5/40.5',300,'T3',1,3,2);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Praceta de António Atum, Nº1, 2ºE','10.1/34.6',145,'T2',1,2,2);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua de Sardinhas Grelhadas, Nº53, R/C','42.1/24.5',1000,'V5',1,2,22);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Praceta de Deus nosso Senhor, Nº40, R/C','11.3/34.5',6000,'V9',1,3,21);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua de Azerbeijão, Nº20, 1ºF','18.5/74.9',4665,'V7',1,1,16);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Praceta Miguel de Andrade, Nº18, 8ºE','1.1/31.5',145,'T1',1,2,5);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Rua do João, Nº33, 1ºE','42.1/26.2',200,'T2',1,1,17);
+insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
+values('Praceta do Gervásio, Nº21, R/CºD','79.2/99.2',40,'T0',1,2,19);
+-- 7º caracaloj
+select * from caracteristicasaloj;
+insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',3);
+insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',2);
+insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',5);
+insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',10);
+insert into caracteristicasaloj values('Rua das Flores, Nº5, 1ºE',1);
+insert into caracteristicasaloj values('Rua das Flores, Nº5, 1ºE',4);
+insert into caracteristicasaloj values('Rua das Flores, Nº5, 1ºE',8);
+insert into caracteristicasaloj values('Rua das Flores, Nº5, 1ºE',15);
+insert into caracteristicasaloj values('Praceta José Amaral, Nº20, R/C',12);
+insert into caracteristicasaloj values('Praceta José Amaral, Nº20, R/C',2);
+insert into caracteristicasaloj values('Praceta José Amaral, Nº20, R/C',4);
+insert into caracteristicasaloj values('Praceta José Amaral, Nº20, R/C',7);
+insert into caracteristicasaloj values('Rua Maria dos Santos, Nº2, 2ºE',7);
+insert into caracteristicasaloj values('Rua Maria dos Santos, Nº2, 2ºE',2);
+insert into caracteristicasaloj values('Rua Maria dos Santos, Nº2, 2ºE',1);
+insert into caracteristicasaloj values('Rua Maria dos Santos, Nº2, 2ºE',4);
+insert into caracteristicasaloj values('Rua dos Anjos, Nº45, 6ºF',2);
+insert into caracteristicasaloj values('Rua dos Anjos, Nº45, 6ºF',5);
+insert into caracteristicasaloj values('Rua dos Anjos, Nº45, 6ºF',3);
+insert into caracteristicasaloj values('Rua dos Anjos, Nº45, 6ºF',7);
+insert into caracteristicasaloj values('Praceta de António Atum, Nº1, 2ºE',2);
+insert into caracteristicasaloj values('Praceta de António Atum, Nº1, 2ºE',1);
+insert into caracteristicasaloj values('Praceta de António Atum, Nº1, 2ºE',3);
+insert into caracteristicasaloj values('Praceta de António Atum, Nº1, 2ºE',4);
+insert into caracteristicasaloj values('Rua de Sardinhas Grelhadas, Nº53, R/C',2);
+insert into caracteristicasaloj values('Rua de Sardinhas Grelhadas, Nº53, R/C',6);
+insert into caracteristicasaloj values('Rua de Sardinhas Grelhadas, Nº53, R/C',8);
+insert into caracteristicasaloj values('Rua de Sardinhas Grelhadas, Nº53, R/C',9);
+insert into caracteristicasaloj values('Praceta de Deus nosso Senhor, Nº40, R/C',1);
+insert into caracteristicasaloj values('Praceta de Deus nosso Senhor, Nº40, R/C',3);
+insert into caracteristicasaloj values('Praceta de Deus nosso Senhor, Nº40, R/C',5);
+insert into caracteristicasaloj values('Praceta de Deus nosso Senhor, Nº40, R/C',7);
+insert into caracteristicasaloj values('Rua de Azerbeijão, Nº20, 1ºF',15);
+insert into caracteristicasaloj values('Rua de Azerbeijão, Nº20, 1ºF',14);
+insert into caracteristicasaloj values('Rua de Azerbeijão, Nº20, 1ºF',12);
+insert into caracteristicasaloj values('Rua de Azerbeijão, Nº20, 1ºF',10);
+insert into caracteristicasaloj values('Praceta Miguel de Andrade, Nº18, 8ºE',2);
+insert into caracteristicasaloj values('Praceta Miguel de Andrade, Nº18, 8ºE',4);
+insert into caracteristicasaloj values('Praceta Miguel de Andrade, Nº18, 8ºE',6);
+insert into caracteristicasaloj values('Praceta Miguel de Andrade, Nº18, 8ºE',10);
+insert into caracteristicasaloj values('Rua do João, Nº33, 1ºE',5);
+insert into caracteristicasaloj values('Rua do João, Nº33, 1ºE',7);
+insert into caracteristicasaloj values('Rua do João, Nº33, 1ºE',9);
+insert into caracteristicasaloj values('Rua do João, Nº33, 1ºE',11);
+insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',7);
+insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',9);
+insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',11);
+insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',13);
+-- 8º serviços
+select * from serviço;
+insert into serviço values('Sport++');
+insert into serviço values('DELL');
+insert into serviço values('EDP');
+insert into serviço values('Nike');
+insert into serviço values('Adidas');
+insert into serviço values('Asus');
+insert into serviço values('Vodafone');
+insert into serviço values('Meo');
+insert into serviço values('Continente');
+insert into serviço values('Leroy Merlin');
+insert into serviço values('Casa');
+insert into serviço values('Jom');
+insert into serviço values('Conforama');
+insert into serviço values('Dechatlon');
+-- 9º produtos
+select * from produto;
+insert into produto values('Chuteiras');
+insert into produto values('Ténis');
+insert into produto values('Micro-ondas');
+insert into produto values('Frigorífico');
+insert into produto values('Sofá');
+insert into produto values('Cadeira');
+insert into produto values('Computador');
+insert into produto values('Rooter');
+insert into produto values('Mesa');
+insert into produto values('Fogão');
+insert into produto values('Máquina de lavar roupa');
+insert into produto values('Máquina de lavar loiça');
+insert into produto values('Ténis de mesa');
+insert into produto values('Cama casal');
+insert into produto values('Cama individual');
+insert into produto values('Cabos de Inthernet');
+insert into produto values('Bola de futebol');
+insert into produto values('Bola de basquet');
+-- 10º compra
+select * from compra;
+-- 11º participante
+select * from participante;
+-- 12º atleta
+-- 13º certificados
+-- 14º treinador
+-- 15º equipa
+-- 16º organizador
+-- 17º modalidade
+-- 18º evento
+-- 19º EquipaEvento
+-- 20º provas
+-- 21º resultados
