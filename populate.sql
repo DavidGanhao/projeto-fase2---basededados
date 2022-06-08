@@ -266,7 +266,6 @@ values('Santa Cruz',1,2,22);
 insert into freguesia(freg_freguesia, freg_codigo, freg_conc_codigo, freg_conc_dist_codigo) 
 values('S. Jorge',1,3,22);
 -- 4º tipologia
-select * from tipologia;
 insert into tipologia values("T0");
 insert into tipologia values("T1");
 insert into tipologia values("T2");
@@ -286,8 +285,8 @@ insert into tipologia values("V6");
 insert into tipologia values("V7");
 insert into tipologia values("V8");
 insert into tipologia values("V9");
+insert into tipologia values("Villa");
 -- 5º caracteristicas
-select * from características;
 insert into características(carac_caracteristica) values('Estado novo');
 insert into características(carac_caracteristica) values('Estado usado');
 insert into características(carac_caracteristica) values('Estado danificado');
@@ -304,7 +303,6 @@ insert into características(carac_caracteristica) values('Zona calma');
 insert into características(carac_caracteristica) values('Zona movimentada');
 insert into características(carac_caracteristica) values('Zona comercial');
 -- 6º alojamento
-select * from alojamento;
 insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
 values('Rua das Flores, Nº2, 3ºD','10.3/32.5',100,'T2',1,2,2);
 insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
@@ -330,7 +328,6 @@ values('Rua do João, Nº33, 1ºE','42.1/26.2',200,'T2',1,1,17);
 insert into alojamento(aloj_morada,aloj_localizacao,aloj_area,aloj_tipol_tipologia,aloj_freg_codigo,aloj_conc_codigo,aloj_conc_dist_codigo)
 values('Praceta do Gervásio, Nº21, R/CºD','79.2/99.2',40,'T0',1,2,19);
 -- 7º caracaloj
-select * from caracteristicasaloj;
 insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',3);
 insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',2);
 insert into caracteristicasaloj values('Rua das Flores, Nº2, 3ºD',5);
@@ -380,7 +377,6 @@ insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',9);
 insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',11);
 insert into caracteristicasaloj values('Praceta do Gervásio, Nº21, R/CºD',13);
 -- 8º serviços
-select * from serviço;
 insert into serviço values('Sport++');
 insert into serviço values('DELL');
 insert into serviço values('EDP');
@@ -394,17 +390,17 @@ insert into serviço values('Leroy Merlin');
 insert into serviço values('Casa');
 insert into serviço values('Jom');
 insert into serviço values('Conforama');
-insert into serviço values('Dechatlon');
+insert into serviço values('Decathlon');
 -- 9º produtos
-select * from produto;
 insert into produto values('Chuteiras');
+insert into produto values('WC (Portable)');
 insert into produto values('Ténis');
 insert into produto values('Micro-ondas');
 insert into produto values('Frigorífico');
 insert into produto values('Sofá');
 insert into produto values('Cadeira');
 insert into produto values('Computador');
-insert into produto values('Rooter');
+insert into produto values('Rooter Internet');
 insert into produto values('Mesa');
 insert into produto values('Fogão');
 insert into produto values('Máquina de lavar roupa');
@@ -416,9 +412,7 @@ insert into produto values('Cabos de Inthernet');
 insert into produto values('Bola de futebol');
 insert into produto values('Bola de basquet');
 -- 10º compra
-select * from compra;
 -- 11º participante
-select * from participante;
 insert into participante values('M','João Manuel Gouveia',null,'2003-10-2',null);
 insert into participante values('M','David Ezequiel Valadas Ganhão',null,'2002-3-20',null);
 insert into participante values('M','Tomás Afonso Ramos',null,'2001-10-30',null);
@@ -443,7 +437,6 @@ insert into participante values('M','Miguel João Veríssimo',null,'1980-12-24',
 insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10',null);
 insert into participante values('F','Rute Tiago da Concentra',null,'1992-11-3',null);
 -- 12º atleta
-select * from atleta;
 insert into atleta values(80,1.80,1);
 insert into atleta values(74,1.78,2);
 insert into atleta values(76,1.81,3);
@@ -460,11 +453,9 @@ insert into atleta values(76,1.76,13);
 insert into atleta values(81,1.73,14);
 insert into atleta values(76,1.75,15);
 -- 13º certificados
-select * from certificado;
 insert into certificado values('Certificado de excelência');
 insert into certificado values('Certificado de participação');
 -- 14º treinador
-select * from treinador;
 insert into treinador values(16,'Certificado de excelência');
 insert into treinador values(17,'Certificado de excelência');
 insert into treinador values(18,'Certificado de excelência');
@@ -474,19 +465,85 @@ insert into treinador values(21,'Certificado de participação');
 insert into treinador values(22,'Certificado de participação');
 insert into treinador values(23,'Certificado de participação');
 -- 15º equipa
-select * from equipa;
 insert into equipa values('SLB','Sport Lisboa e Benfica');
 insert into equipa values('SCP','Sporting Clube de Portugal');
 insert into equipa values('FCP','Futebol Clube do Porto');
-insert into equipa values('CDT','Clube desportivo Tondela');
-insert into equipa values('CDCP','Clube desportivo Cova da Piedade');
-insert into equipa values('CDA','Clube desportivo Amora');
-insert into equipa values('CDG','Centro desportivo Guimarães');
-insert into equipa values('CDB','Centro desportivo Braga');
-insert into equipa values('CDC','Centro desportivo Chaves');
+insert into equipa values('CDT','Clube desportivo de Tondela');
+insert into equipa values('CDCP','Clube desportivo de Cova da Piedade');
+insert into equipa values('CDA','Clube desportivo de Amora');
+insert into equipa values('CDG','Centro desportivo de Guimarães');
+insert into equipa values('CDB','Centro desportivo de Braga');
+insert into equipa values('CDC','Centro desportivo de Chaves');
 -- 16º organizador
+insert into organizador value('Instituto Politécnico de Setúbal');
+insert into organizador value('Galp energias');
+insert into organizador value('EDP');
+insert into organizador value('NOS');
+insert into organizador value('Make it Happen');
+insert into organizador value('Cruz Vermelha');
+insert into organizador value('McDonalds');
+insert into organizador value('Burguer King');
 -- 17º modalidade
--- 18º evento
--- 19º EquipaEvento
--- 20º provas
--- 21º resultados
+insert into modalidade(mod_nome) value('Corrida 100m');
+insert into modalidade(mod_nome) value('Corrida 1000m');
+insert into modalidade(mod_nome) value('Corrida 400m');
+insert into modalidade(mod_nome) value('Corrida Milha');
+insert into modalidade(mod_nome) value('Triplo salto');
+insert into modalidade(mod_nome) value('Salto em comprimento');
+insert into modalidade(mod_nome) value('Salto em altura');
+insert into modalidade(mod_nome) value('Salto com vara');
+insert into modalidade(mod_nome) value('Lançamento de peso');
+insert into modalidade(mod_nome) value('Lançamento de dardo');
+insert into modalidade(mod_nome) value('Corrida com barreiras');
+insert into modalidade(mod_nome) value('Corrida com obstáculos');
+insert into modalidade(mod_nome) value('Corrida de estafeta');
+insert into modalidade(mod_nome) value('Marcha');
+insert into modalidade(mod_nome) value('Maratona');
+-- 18º participanteEquipa
+insert into participanteequipa values('SLB',1);
+insert into participanteequipa values('SLB',5);
+insert into participanteequipa values('SLB',8);
+insert into participanteequipa values('SLB',17);
+insert into participanteequipa values('CDG',2);
+insert into participanteequipa values('CDG',4);
+insert into participanteequipa values('CDG',18);
+insert into participanteequipa values('FCP',7);
+insert into participanteequipa values('FCP',10);
+insert into participanteequipa values('FCP',19);
+insert into participanteequipa values('SCP',11);
+insert into participanteequipa values('SCP',13);
+insert into participanteequipa values('SCP',20);
+insert into participanteequipa values('CDT',14);
+insert into participanteequipa values('CDT',21);
+insert into participanteequipa values('CDT',22);
+-- 19º evento
+insert into evento values('Evento em que vão decorrer modalidades de atletismo no inverno.','2021-11-25','2022-01-05','Evento de Inverno Atletismo','Parque do Serrado',null,'Galp energias');
+insert into evento values('Evento em que vão decorrer modalidades de atletismo na primavera.','2022-03-22','2022-06-30','Evento de Primavera Atletismo','Campo grande',null,'NOS');
+-- 20º EquipaEvento
+insert into equipaevento values('SLB',1);
+insert into equipaevento values('CDG',1);
+insert into equipaevento values('CDT',2);
+insert into equipaevento values('SCP',2);
+insert into equipaevento values('FCP',2);
+-- 21º provas
+insert into prova values(
+'32.3/31.6',null,'2021-12-24','1.5 Horas',1,4,1,3,12);
+insert into prova values(
+'31.4/32.1',null,'2021-12-26','1.5 Horas',1,6,1,2,12);
+insert into prova values(
+'32.3/31.6',null,'2021-12-27','2.0 Horas',1,3,1,3,12);
+insert into prova values(
+'33.1/32.2',null,'2021-12-27','2.0 Horas',1,8,1,3,12);
+insert into prova values(
+'31.3/34.6',null,'2021-12-27','2.0 Horas',1,9,1,3,12);
+insert into prova values(
+'89.3/20.6',null,'2022-04-25','2.0 Horas',2,4,1,1,10);
+insert into prova values(
+'89.3/20.6',null,'2022-04-25','1.0 Horas',2,6,1,1,10);
+insert into prova values(
+'87.3/20.5',null,'2022-04-26','3.0 Horas',2,10,1,1,10);
+insert into prova values(
+'88.3/20.1',null,'2022-04-26','2.0 Horas',2,11,1,1,10);
+insert into prova values(
+'91.3/22.3',null,'2022-04-27','1.0 Horas',2,7,1,1,10);
+-- 22º resultados

@@ -37,7 +37,7 @@ CREATE TABLE Freguesia
 
 CREATE TABLE Tipologia
 (
-  tipol_tipologia VARCHAR(2) NOT NULL,
+  tipol_tipologia VARCHAR(10) NOT NULL,
   PRIMARY KEY (tipol_tipologia)
 );
 
@@ -69,14 +69,14 @@ CREATE TABLE Equipa
 
 CREATE TABLE Organizador
 (
-  org_nome VARCHAR(20) NOT NULL,
+  org_nome VARCHAR(40) NOT NULL,
   PRIMARY KEY (org_nome)
 );
 
 CREATE TABLE Modalidade
 (
-  mod_nome VARCHAR(20) NOT NULL,
-  mod_code INT NOT NULL,
+  mod_nome VARCHAR(40) NOT NULL,
+  mod_code INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (mod_code)
 );
 
@@ -97,7 +97,7 @@ CREATE TABLE Alojamento
 
 CREATE TABLE Compra
 (
-  comp_ip VARCHAR(10) NOT NULL,
+  comp_ip VARCHAR(20) NOT NULL,
   comp_preco INT NOT NULL,
   comp_datadecompra DATE NOT NULL,
   comp_prod_nome VARCHAR(30) NOT NULL,
@@ -111,16 +111,15 @@ CREATE TABLE Compra
 
 CREATE TABLE Evento
 (
-  even_descricao VARCHAR(40) NOT NULL,
-  even_periodo VARCHAR(20) NOT NULL,
-  even_nome VARCHAR(20) NOT NULL,
-  even_morada VARCHAR(20) NOT NULL,
+  even_descricao VARCHAR(100) NOT NULL,
+  even_perinicio date NOT NULL,
+  even_perfim date NOT NULL,
+  even_nome VARCHAR(40) NOT NULL,
+  even_morada VARCHAR(50) NOT NULL,
   even_code INT NOT NULL AUTO_INCREMENT,
-  even_org_nome VARCHAR(20) NOT NULL,
-  even_mod_code INT NOT NULL,
+  even_org_nome VARCHAR(50) NOT NULL,
   PRIMARY KEY (even_code),
   FOREIGN KEY (even_org_nome) REFERENCES Organizador(org_nome),
-  FOREIGN KEY (even_mod_code) REFERENCES Modalidade(mod_code),
   UNIQUE (even_morada)
 );
 
@@ -129,13 +128,15 @@ CREATE TABLE Prova
   prov_localizacao VARCHAR(10) NOT NULL,
   prov_id INT NOT NULL AUTO_INCREMENT,
   prov_data DATE NOT NULL,
-  prov_duracao INT NOT NULL,
+  prov_duracao VARCHAR(30) NOT NULL,
   prov_even_code INT NOT NULL,
+  prov_mod_code INT NOT NULL,
   prov_freg_codigo INT NOT NULL,
   prov_conc_codigo INT NOT NULL,
   prov_conc_dist_codigo INT NOT NULL,
   PRIMARY KEY (prov_id),
   FOREIGN KEY (prov_even_code) REFERENCES Evento(even_code),
+  FOREIGN KEY (prov_mod_code) REFERENCES Modalidade(mod_code),
   FOREIGN KEY (prov_freg_codigo, prov_conc_codigo, prov_conc_dist_codigo) REFERENCES Freguesia(freg_codigo, freg_conc_codigo, freg_conc_dist_codigo)
 );
 
