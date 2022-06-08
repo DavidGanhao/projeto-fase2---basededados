@@ -419,10 +419,71 @@ insert into produto values('Bola de basquet');
 select * from compra;
 -- 11º participante
 select * from participante;
+insert into participante values('M','João Manuel Gouveia',null,'2003-10-2',null);
+insert into participante values('M','David Ezequiel Valadas Ganhão',null,'2002-3-20',null);
+insert into participante values('M','Tomás Afonso Ramos',null,'2001-10-30',null);
+insert into participante values('F','Maria Fernanda dos Santos',null,'1998-5-23',null);
+insert into participante values('F','Elisa Rui Viegas',null,'2004-11-2',null);
+insert into participante values('M','João Martins Fonseca',null,'2002-7-28',null);
+insert into participante values('M','Manuel Valente',null,'2000-5-6',null);
+insert into participante values('F','Ana Mário Antunes',null,'2005-12-10',null);
+insert into participante values('F','Filipa Filipa Manuela',null,'2002-12-20',null);
+insert into participante values('M','Filipe Hugo Manuel',null,'2002-5-30',null);
+insert into participante values('M','Diogo Nuno Avarias',null,'2003-5-1',null);
+insert into participante values('F','Manuela Yuri Forte',null,'2001-3-20',null);
+insert into participante values('M','Raúl Manuel Matos',null,'2001-4-1',null);
+insert into participante values('M','Jorge Hugo Sacramento',null,'2004-3-21',null);
+insert into participante values('F','Fabiana Sheila Luís',null,'2002-4-17',null);
+insert into participante values('M','André da Silva Caetano',null,'1989-11-9',null);
+insert into participante values('F','Mariana Vasco Horta',null,'1986-8-25',null);
+insert into participante values('M','Fábio Sousa Martins',null,'1980-2-4',null);
+insert into participante values('M','Fábio Jorge Caetano',null,'1984-10-2',null);
+insert into participante values('F','Adele Joana Doidinho',null,'1978-7-3',null);
+insert into participante values('M','Miguel João Veríssimo',null,'1980-12-24',null);
+insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10',null);
+insert into participante values('F','Rute Tiago da Concentra',null,'1992-11-3',null);
 -- 12º atleta
+select * from atleta;
+insert into atleta values(80,1.80,1);
+insert into atleta values(74,1.78,2);
+insert into atleta values(76,1.81,3);
+insert into atleta values(84,1.73,4);
+insert into atleta values(72,1.76,5);
+insert into atleta values(67,1.82,6);
+insert into atleta values(96,1.96,7);
+insert into atleta values(62,1.67,8);
+insert into atleta values(72,1.78,9);
+insert into atleta values(74,1.75,10);
+insert into atleta values(78,1.78,11);
+insert into atleta values(75,1.78,12);
+insert into atleta values(76,1.76,13);
+insert into atleta values(81,1.73,14);
+insert into atleta values(76,1.75,15);
 -- 13º certificados
+select * from certificado;
+insert into certificado values('Certificado de excelência');
+insert into certificado values('Certificado de participação');
 -- 14º treinador
+select * from treinador;
+insert into treinador values(16,'Certificado de excelência');
+insert into treinador values(17,'Certificado de excelência');
+insert into treinador values(18,'Certificado de excelência');
+insert into treinador values(19,'Certificado de participação');
+insert into treinador values(20,'Certificado de excelência');
+insert into treinador values(21,'Certificado de participação');
+insert into treinador values(22,'Certificado de participação');
+insert into treinador values(23,'Certificado de participação');
 -- 15º equipa
+select * from equipa;
+insert into equipa values('SLB','Sport Lisboa e Benfica');
+insert into equipa values('SCP','Sporting Clube de Portugal');
+insert into equipa values('FCP','Futebol Clube do Porto');
+insert into equipa values('CDT','Clube desportivo Tondela');
+insert into equipa values('CDCP','Clube desportivo Cova da Piedade');
+insert into equipa values('CDA','Clube desportivo Amora');
+insert into equipa values('CDG','Centro desportivo Guimarães');
+insert into equipa values('CDB','Centro desportivo Braga');
+insert into equipa values('CDC','Centro desportivo Chaves');
 -- 16º organizador
 -- 17º modalidade
 -- 18º evento

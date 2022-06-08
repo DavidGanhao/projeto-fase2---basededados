@@ -63,7 +63,7 @@ CREATE TABLE Características
 CREATE TABLE Equipa
 (
   equip_sigla VARCHAR(5) NOT NULL,
-  equip_nome VARCHAR(20) NOT NULL,
+  equip_nome VARCHAR(40) NOT NULL,
   PRIMARY KEY (equip_sigla)
 );
 
@@ -180,7 +180,7 @@ CREATE TABLE Treinador
 CREATE TABLE Atleta
 (
   atlet_peso INT NOT NULL,
-  atlet_altura INT NOT NULL,
+  atlet_altura FLOAT NOT NULL,
   atlet_par_id INT NOT NULL,
   PRIMARY KEY (atlet_par_id),
   FOREIGN KEY (atlet_par_id) REFERENCES Participante(par_id)
