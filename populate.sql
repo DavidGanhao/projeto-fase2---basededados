@@ -389,6 +389,7 @@ insert into serviço values('Continente');
 insert into serviço values('Leroy Merlin');
 insert into serviço values('Casa');
 insert into serviço values('Jom');
+insert into serviço value('Worten');
 insert into serviço values('Conforama');
 insert into serviço values('Decathlon');
 -- 9º produtos
@@ -412,6 +413,26 @@ insert into produto values('Cabos de Inthernet');
 insert into produto values('Bola de futebol');
 insert into produto values('Bola de basquet');
 -- 10º compra
+insert into compra values(null
+,100, '2011-2-1', 'Micro-ondas','Worten','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
+,600, '2012-10-2', 'Frigorífico','Worten','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
+,250, '2012-10-3', 'Cama individual','Jom','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
+,60, '2013-1-1', 'Ténis','Nike','Praceta Miguel de Andrade, Nº18, 8ºE');
+insert into compra values(null
+,400, '2013-1-1', 'Máquina de lavar loiça','Worten','Praceta Miguel de Andrade, Nº18, 8ºE');
+insert into compra values(null
+,570, '2013-10-3', 'Cama casal','Jom','Praceta Miguel de Andrade, Nº18, 8ºE');
+insert into compra values(null
+,60, '2013-11-2', 'Ténis','Adidas','Rua das Flores, Nº2, 3ºD');
+insert into compra values(null
+,20, '2014-1-2', 'Bola de basquet','Sport++','Rua das Flores, Nº2, 3ºD');
+insert into compra values(null
+,400, '2014-2-12', 'Máquina de lavar roupa','Worten','Rua das Flores, Nº2, 3ºD');
+insert into compra values(null
+,570, '2014-11-3', 'Cama casal','Jom','Rua das Flores, Nº2, 3ºD');
 -- 11º participante
 insert into participante values('M','João Manuel Gouveia',null,'2003-10-2',null);
 insert into participante values('M','David Ezequiel Valadas Ganhão',null,'2002-3-20',null);
@@ -547,3 +568,53 @@ insert into prova values(
 insert into prova values(
 '91.3/22.3',null,'2022-04-27','1.0 Horas',2,7,1,1,10);
 -- 22º resultados
+insert into resultados values(1,4,1,100);
+insert into resultados values(2,6,1,98);
+insert into resultados values(3,2,1,94);
+insert into resultados values(4,8,1,56);
+insert into resultados values(5,1,1,32);
+insert into resultados values(1,1,2,95);
+insert into resultados values(2,14,2,92);
+insert into resultados values(3,6,2,86);
+insert into resultados values(4,7,2,85);
+insert into resultados values(5,2,2,83);
+insert into resultados values(1,15,3,67);
+insert into resultados values(2,7,3,66);
+insert into resultados values(3,1,3,66);
+insert into resultados values(4,13,3,30);
+insert into resultados values(5,14,3,27);
+insert into resultados values(1,12,4,100);
+insert into resultados values(2,10,4,99);
+insert into resultados values(3,9,4,99);
+insert into resultados values(4,1,4,87);
+insert into resultados values(5,14,4,84);
+insert into resultados values(1,11,5,92);
+insert into resultados values(2,1,5,92);
+insert into resultados values(3,2,5,91);
+insert into resultados values(4,6,5,87);
+insert into resultados values(5,5,5,85);
+insert into resultados values(1,1,6,94);
+insert into resultados values(2,4,6,91);
+insert into resultados values(3,3,6,85);
+insert into resultados values(4,2,6,74);
+insert into resultados values(5,14,6,12);
+insert into resultados values(1,9,7,100);
+insert into resultados values(2,10,7,76);
+insert into resultados values(3,15,7,73);
+insert into resultados values(4,5,7,71);
+insert into resultados values(5,3,7,65);
+insert into resultados values(1,2,8,89);
+insert into resultados values(2,6,8,74);
+insert into resultados values(3,10,8,73);
+insert into resultados values(4,12,8,64);
+insert into resultados values(5,14,8,43);
+insert into resultados values(1,7,9,93);
+insert into resultados values(2,3,9,92);
+insert into resultados values(3,4,9,84);
+insert into resultados values(4,1,9,81);
+insert into resultados values(5,2,9,74);
+insert into resultados values(1,7,10,83);
+insert into resultados values(2,2,10,70);
+insert into resultados values(3,8,10,35);
+insert into resultados values(4,10,10,2);
+insert into resultados values(5,15,10,1);

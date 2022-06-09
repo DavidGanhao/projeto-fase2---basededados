@@ -97,12 +97,12 @@ CREATE TABLE Alojamento
 
 CREATE TABLE Compra
 (
-  comp_ip VARCHAR(20) NOT NULL,
+  comp_ip int NOT NULL auto_increment,
   comp_preco INT NOT NULL,
   comp_datadecompra DATE NOT NULL,
   comp_prod_nome VARCHAR(30) NOT NULL,
   comp_serv_fornecedor VARCHAR(20) NOT NULL,
-  comp_aloj_morada VARCHAR(30) NOT NULL,
+  comp_aloj_morada VARCHAR(50) NOT NULL,
   PRIMARY KEY (comp_ip, comp_prod_nome, comp_serv_fornecedor, comp_aloj_morada),
   FOREIGN KEY (comp_prod_nome) REFERENCES Produto(prod_nome),
   FOREIGN KEY (comp_serv_fornecedor) REFERENCES Serviço(serv_fornecedor),
@@ -161,10 +161,10 @@ CREATE TABLE EquipaEvento
 CREATE TABLE Participante
 (
   par_sexo CHAR(1) NOT NULL,
-  par_nome VARCHAR(30) NOT NULL,
+  par_nome VARCHAR(50) NOT NULL,
   par_id INT NOT NULL AUTO_INCREMENT,
   par_dnsc DATE NOT NULL,
-  par_aloj_morada VARCHAR(30),
+  par_aloj_morada VARCHAR(50),
   PRIMARY KEY (par_id),
   FOREIGN KEY (par_aloj_morada) REFERENCES Alojamento(aloj_morada)
 );
@@ -192,9 +192,11 @@ CREATE TABLE Resultados
   res_classificacao INT NOT NULL,
   res_atlet_par_id INT NOT NULL,
   res_prov_id INT NOT NULL,
+  res_pontuacao FLOAT NOT NULL,
   PRIMARY KEY (res_atlet_par_id, res_prov_id),
   FOREIGN KEY (res_atlet_par_id) REFERENCES Atleta(atlet_par_id),
-  FOREIGN KEY (res_prov_id) REFERENCES Prova(prov_id)
+  FOREIGN KEY (res_prov_id) REFERENCES Prova(prov_id),
+  CONSTRAINT verificar_pontuacao CHECK (res_pontuacao >= 0 and res_pontuacao <= 100)
 );
 
 CREATE TABLE ParticipanteEquipa
@@ -204,4 +206,18 @@ CREATE TABLE ParticipanteEquipa
   PRIMARY KEY (parequip_equip_sigla, parequip_par_id),
   FOREIGN KEY (parequip_equip_sigla) REFERENCES Equipa(equip_sigla),
   FOREIGN KEY (parequip_par_id) REFERENCES Participante(par_id)
+);
+
+CREATE TABLE tbl_logs
+(
+	logs_id INT AUTO_INCREMENT NOT NULL,
+	logs_date_oper DATETIME NOT NULL,
+    logs_par_id INT NOT NULL,
+    logs_prov_id INT NOT NULL,
+    logs_old_pontuacao FLOAT NOT NULL,
+    logs_new_pontuacao FLOAT NOT NULL,
+    logs_classificacao INT NOT NULL,
+    PRIMARY KEY(logs_id),
+    FOREIGN KEY (logs_par_id) REFERENCES Participante(par_id),
+    FOREIGN KEY (logs_prov_id) REFERENCES Prova(prov_id)
 );
