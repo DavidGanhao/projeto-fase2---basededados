@@ -116,3 +116,8 @@ select * from vCalculoAreaAlojamento;
 
 -- Lista 
 
+
+-- Lista de alojamentos cujo total de itens associados é superior a 4 QUASE ACABADO, DUVIDASSSSSSSSSSSSSSSSSSS
+select Morada, count(*) as 'Produtos' from vMoradaProdutos
+group by Morada;
+
