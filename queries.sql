@@ -121,3 +121,14 @@ select * from vCalculoAreaAlojamento;
 select Morada, count(*) as 'Produtos' from vMoradaProdutos
 group by Morada;
 
+-- Top 5 das provas com maior número de participantes
+select IDProva, count(IDAtleta) as 'Atletas' from vResultadosOrdenado
+group by IDProva limit IDAtleta;
+
+select * from vResultadosOrdenado;
+
+select * from participante;
+select * from modalidade;
+
+select * from vResultadosOrdenado;
+
