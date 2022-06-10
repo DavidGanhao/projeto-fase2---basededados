@@ -123,9 +123,13 @@ group by Morada;
 
 -- Top 5 das provas com maior número de participantes
 select IDProva, count(IDAtleta) as 'Atletas' from vResultadosOrdenado
-group by IDProva limit IDAtleta;
+group by IDProva order by count(IDAtleta) desc
+limit 5;
 
 select * from vResultadosOrdenado;
+
+
+SELECT * FROM resultados;
 
 select * from participante;
 select * from modalidade;
