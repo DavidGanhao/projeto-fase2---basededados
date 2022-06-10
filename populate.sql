@@ -420,6 +420,12 @@ insert into compra values(null
 insert into compra values(null
 ,250, '2012-10-3', 'Cama individual','Jom','Rua de Azerbeijão, Nº20, 1ºF');
 insert into compra values(null
+,100, '2011-2-1', 'Mesa','Jom','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
+,140, '2012-10-2', 'Ténis de mesa','Sport++','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
+,245, '2012-10-3', 'Cama individual','Jom','Rua de Azerbeijão, Nº20, 1ºF');
+insert into compra values(null
 ,60, '2013-1-1', 'Ténis','Nike','Praceta Miguel de Andrade, Nº18, 8ºE');
 insert into compra values(null
 ,400, '2013-1-1', 'Máquina de lavar loiça','Worten','Praceta Miguel de Andrade, Nº18, 8ºE');
@@ -444,12 +450,12 @@ insert into participante values('M','Manuel Valente',null,'2000-5-6',null);
 insert into participante values('F','Ana Mário Antunes',null,'2005-12-10',null);
 insert into participante values('F','Filipa Filipa Manuela',null,'2002-12-20',null);
 insert into participante values('M','Filipe Hugo Manuel',null,'2002-5-30',null);
-insert into participante values('M','Diogo Nuno Avarias',null,'2003-5-1',null);
+insert into participante values('M','Diogo Nuno Avarias',null,'2003-5-1','Praceta do Gervásio, Nº21, R/CºD');
 insert into participante values('F','Manuela Yuri Forte',null,'2001-3-20',null);
 insert into participante values('M','Raúl Manuel Matos',null,'2001-4-1','Rua das Flores, Nº2, 3ºD');
 insert into participante values('M','Jorge Hugo Sacramento',null,'2004-3-21',null);
 insert into participante values('F','Fabiana Sheila Luís',null,'2002-4-17',null);
-insert into participante values('M','André da Silva Caetano',null,'1989-11-9',null);
+insert into participante values('M','André da Silva Caetano',null,'1989-11-9','Praceta do Gervásio, Nº21, R/CºD');
 insert into participante values('F','Mariana Vasco Horta',null,'1986-8-25',null);
 insert into participante values('M','Fábio Sousa Martins',null,'1980-2-4',null);
 insert into participante values('M','Fábio Jorge Caetano',null,'1984-10-2',null);
@@ -458,20 +464,20 @@ insert into participante values('M','Miguel João Veríssimo',null,'1980-12-24',
 insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10','Rua do João, Nº33, 1ºE');
 insert into participante values('F','Rute Tiago da Concentra',null,'1992-11-3',null);
 insert into participante values('M', 'Pedro Salazar Saramago',null,'1997-6-5',null);
-insert into participante values('M', 'António Vasco Salmão',null, '1999-8-21',null);
+insert into participante values('M', 'António Vasco Salmão',null, '1999-8-21','Rua de Azerbeijão, Nº20, 1ºF');
 insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
 insert into participante values('F', 'Helena Vasconcelos Ramalho',null, '2002-6-3',null);
-insert into participante values('F', 'Jasmina Carlota de Portalegre',null, '2003-4-7',null);
+insert into participante values('F', 'Jasmina Carlota de Portalegre',null, '2003-4-7','Praceta do Gervásio, Nº21, R/CºD');
 insert into participante values('M', 'Flávio Pedrogão Silves',null, '2004-6-1',null);
 insert into participante values('F', 'Mariana Clara De Horta',null, '2002-1-10',null);
 insert into participante values('M', 'Martim Afonso Narciso',null, '1996-2-20',null);
-insert into participante values('M', 'João Carlos Silvino',null, '2002-4-8',null);
+insert into participante values('M', 'João Carlos Silvino',null, '2002-4-8','Rua de Azerbeijão, Nº20, 1ºF');
 insert into participante values('F', 'Carolina Deslandes De Sintra',null, '2001-6-2',null);
 insert into participante values('M', 'António Carlos Ganhão',null, '1999-9-9',null);
 insert into participante values('F', 'Joana Santos Sottomayor',null, '1996-5-5',null);
 insert into participante values('F', 'Beatriz Corceiro Silva',null, '2001-8-2',null);
-insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
-insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
+insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2','Rua de Azerbeijão, Nº20, 1ºF');
+insert into participante values('M', 'Rita Lima',null, '2001-7-2',null);
 
 
 -- 12º atleta

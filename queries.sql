@@ -60,7 +60,7 @@ res_prov_id as 'Id da prova', res_pontuacao as 'Pontuação Obtida' from resulta
 select serv_fornecedor as 'Fornecedor' from serviço;
 
 -- Mostrar informações gerais sobre tbl_logs
-select * from tbl_logs;  -- POR FAZER!
+select * from vTBLLogs;
 
 -- Mostrar informações gerais sobre tipologia
 select tipol_tipologia as 'Tipologia' from tipologia;
@@ -87,10 +87,7 @@ select par_sexo as 'Sexo', par_nome as 'Nome', par_id as 'Id do participante', p
 ifnull(par_aloj_morada, '(Morada por preencher)')  as 'Morada do participante' from participante;
 
 -- Lista de equipas e respetivos elementos cuja equipa 
-select equip_nome, par_nome from equipa e
-join ;
-
-
+select * from vEquipaParticipante;
 
 -- Lista de provas do evento (por todos os id's de prova do mesmo evento na mesma linha!)
 select even_nome as 'Evento', prov_id as 'Id da prova' from evento e
@@ -104,16 +101,18 @@ join prova p on e.even_code=p.prov_even_code
 ;
 
 -- Lista de alojamentos dos participantes com pelo menos 1 medalha
+select Morada, Localização, Área, Tipologia, Freguesia, Concelho, Distrito, par_nome as 'Nome completo' from vAlojamento
+join participante on par_aloj_morada = Morada
+join resultados on par_id = res_atlet_par_id
+where res_classificacao <= 3
+group by par_id;
 
 -- Lista de alojamentos dos participantes de uma equipa específica (escolher uma qualquer)
-
--- Lista de alojamentos de uma freguesia
-
--- Lista de alojamentos de um concelho
-
--- Lista de alojamentos de um distrito
+call sp_mostrar_aloj_equipa('SCP');
 
 -- Lista de alojamentos com uma área superior a 500m2
+select * from vAlojamento
+where Área > 500;
 
 -- Lista resultados com os primeiros três em cada prova
 select * from vResultadosOrdenado

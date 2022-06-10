@@ -37,6 +37,27 @@ delimiter ;
 
 -- VIEWS
 
+drop view if exists vCompras;
+create view vCompras as
+select comp_ip as 'IP', comp_preco as 'Preço', comp_datadecompra as 'Data da compra',
+ comp_prod_nome as 'Produto', comp_serv_fornecedor as 'Fornecedor', comp_aloj_morada as 'Morada'
+from compra;
+drop view if exists vParticipante;
+create view vParticipante as
+select par_id as 'ID', par_nome as 'Nome Completo', par_sexo as 'Sexo',par_dnsc as 'Data de Nascimento',
+timestampdiff(year, par_dnsc, curdate()) as 'Idade',
+par_aloj_morada as 'Alojamento' from participante;
+
+drop view if exists vTBLLogs;
+create view vTBLLogs as
+select logs_id as 'IDLogs', logs_date_oper as 'Data da operação',
+logs_par_id as 'IDParticipante', logs_prov_id as 'IDProva', logs_old_pontuacao as 'Pontuação alterada'
+, logs_new_pontuacao as 'Pontuação adicionada', logs_classificacao as 'Classificação' from tbl_logs;
+
+drop view if exists vAlojamento;
+create view vAlojamento as
+select aloj_morada as 'Morada', aloj_localizacao as 'Localização', aloj_area as 'Área', aloj_tipol_tipologia as 'Tipologia', aloj_freg_codigo as 'Freguesia',
+aloj_conc_codigo as 'Concelho', aloj_conc_dist_codigo as 'Distrito' from alojamento;
 
 drop view if exists vProvas;
 create view vProvas as
@@ -189,7 +210,7 @@ create procedure sp_criar_participante(
     in dataNascimento date
 )
 begin
-	insert into participante(par_sexo, par_nome, par_id) values(sexo, nome, dataNascimento);
+	insert into participante(par_sexo, par_nome, par_dnsc) values(sexo, nome, dataNascimento);
 end $$
 delimiter ;
 
@@ -231,25 +252,6 @@ create procedure sp_adicionar_equipa_evento(
 begin
 	insert into equipaevento(eqev_equip_sigla, eqev_even_code)
     values(equipSigla, evenCode);
-end $$
-delimiter ;
-
-drop procedure if exists sp_criar_prova;
-delimiter $$
-create procedure sp_criar_prova(
-	in localiz varchar(10),
-    in provDate date,
-    in provDuracao varchar(30),
-    in evenCode int,
-    in modCode int,
-    in fregCod int,
-    in concCod int,
-    in distCod int
-)
-begin
-	insert into prova(prov_localizacao, prov_data, prov_duracao, prov_even_code, prov_mod_code
-    , prov_freg_codigo, prov_conc_codigo, prov_conc_dist_codigo)
-    values(localiz, provDate, provDuracao, evenCode, modCode, fregCode, concCod, distCod);
 end $$
 delimiter ;
 
@@ -376,6 +378,21 @@ begin
 end $$
 delimiter ;
 
+drop procedure if exists sp_mostrar_aloj_equipa;
+delimiter $$
+create procedure sp_mostrar_aloj_equipa(
+	in equipSigla varchar(5)
+)
+begin
+select Morada, Localização, Área, Tipologia, Freguesia, Concelho, Distrito, par_nome as 'Nome', parequip_equip_sigla as 'Equipa' from vAlojamento
+	join participante on par_aloj_morada = Morada
+	join participanteequipa on par_id = parequip_par_id
+    where equipSigla = parequip_equip_sigla;
+end $$
+delimiter ;
+
+
+
 -- TRIGGERS
 
 drop trigger if exists verificar_sexo;
@@ -471,11 +488,9 @@ before update on resultados
 for each row
 begin
 	insert into tbl_logs(logs_date_oper, logs_par_id, logs_prov_id,
-    logs_old_pontuacao, logs_new_pontuacao, logs_classificao) values(
+    logs_old_pontuacao, logs_new_pontuacao, logs_classificacao) values(
 	curtime(), OLD.res_atlet_par_id, OLD.res_prov_id, OLD.res_pontuacao,
     NEW.res_pontuacao, OLD.res_classificacao
     );
 end $$
 delimiter ;
-
-

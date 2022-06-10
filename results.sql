@@ -15,7 +15,7 @@ create procedure sp_criar_prova(
 begin
 	insert into prova(prov_localizacao, prov_data, prov_duracao, prov_even_code, prov_mod_code
     , prov_freg_codigo, prov_conc_codigo, prov_conc_dist_codigo)
-    values(localiz, provDate, provDuracao, evenCode, modCode, fregCode, concCod, distCod);
+    values(localiz, provDate, provDuracao, evenCode, modCode, fregCod, concCod, distCod);
 end $$
 delimiter ;
 
@@ -28,6 +28,20 @@ begin
 	delete from prova
     where prov_id = provId;
 end //
+delimiter ;
+
+drop procedure if exists sp_update_classificacao_prova;
+delimiter $$
+create procedure sp_update_classificacao_prova(
+	in atletId int,
+    in provId int,
+    in pontuacao float
+)
+begin
+	update resultados
+    set	res_pontuacao = pontuacao
+    where res_atlet_par_id = atletId and res_prov_id = provId;
+end $$
 delimiter ;
 
 drop procedure if exists sp_adicionar_classificacao_prova;
@@ -54,5 +68,3 @@ begin
     where IDProva = provId;
 end $$
 delimiter ;
-
-call sp_clonar_prova(2);

@@ -9,7 +9,11 @@ set par_sexo = 'K'
 where par_id = 33;
 select * from vParticipante;
 -- Quando se tenta adicionar ou alterar o valor do peso e altura
+<<<<<<< Updated upstream
 call sp_definir_atleta(40, -32,-1.5);
+=======
+call sp_definir_atleta(39, -32,-1.5);
+>>>>>>> Stashed changes
 select * from vAtletaInformacao;
 update atleta
 set atlet_peso = -2 and atlet_altura = -2
