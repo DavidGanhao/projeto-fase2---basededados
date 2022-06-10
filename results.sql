@@ -19,28 +19,27 @@ begin
 end $$
 delimiter ;
 
--- nao esta acabado
 drop procedure if exists sp_remover_prova;
 delimiter //
 create procedure sp_remover_prova(
-	in localiz varchar(10),
-    in provDate date,
-    in provDuracao varchar(30),
-    in evenCode int,
-    in modCode int,
-    in fregCod int,
-    in concCod int,
-    in distCod int
+	in provId int
 )
 begin	
 	delete from prova
-    where prov_localizacao=localiz and
-	prov_data=provDate and
-    prov_duracao=provDuracao and
-    prov_even_code=evenCode and
-    prov_mod_code=modCode and
-    prov_freg_codigo=fregCod and
-    prov_conc_codigo=concCod and
-    prov_conc_dist_codigo=distCod;
+    where prov_id = provId;
 end //
+delimiter ;
+
+drop procedure if exists sp_adicionar_classificacao_prova;
+delimiter $$
+create procedure sp_adicionar_classificacao_prova(
+	in classificao int,
+    in parId int,
+    in provId int,
+    in pontuacao float
+)
+begin
+	insert into resultados(res_classificacao, res_atlet_par_id, res_prov_id, res_pontuacao)
+    values(classificao, parId, provId, pontuacao);
+end $$
 delimiter ;

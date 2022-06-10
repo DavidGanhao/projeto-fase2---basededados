@@ -91,7 +91,7 @@ join organizador on even_org_nome = org_nome;
 
 drop view if exists vEquipaParticipante;
 create view vEquipaParticipante as
-select par_id as 'ID', par_nome as 'Nome Completo', equip_sigla as 'Sigla', equip_nome as 'Nome da equipa'
+select par_id as 'ID', par_nome as 'Nome Completo', par_dnsc as 'Data de nascimento',func_getIdade(par_dnsc) as 'Idade',equip_sigla as 'Sigla', equip_nome as 'Nome da equipa'
 from equipa
 join participanteequipa on parequip_equip_sigla = equip_sigla
 join participante on parequip_par_id = par_id;
@@ -111,6 +111,56 @@ select aloj_tipol_tipologia as 'Tipologia', avg(aloj_area) 'Média de área',
 max(aloj_area) 'Área máxima', min(aloj_area) 'Área mínima', stddev(aloj_area) 'Desvio Padrão'
  from alojamento
  group by aloj_tipol_tipologia;
+
+drop view if exists vCalculoIdadePorEvento;
+create view vCalculoIdadePorEvento as
+select eqev_even_code as 'Evento', avg(Idade) as 'Média de idade', max(Idade) as 'Idade máxima', min(Idade) as 'Idade mínima', stddev(Idade) as 'Desvio Padrão' from vEquipaParticipante
+join equipaevento on eqev_equip_sigla = Sigla
+group by eqev_even_code;
+
+drop view if exists vCalculoAlturaPorEvento;
+create view vCalculoAlturaPorEvento as
+select eqev_even_code as 'Evento', avg(Altura) as 'Média de altura', max(Altura) as 'Altura máxima', min(Altura) as 'Altura mínima', stddev(Altura) as 'Desvio padrão' from vAtletaInformacao
+join participanteequipa on ID = parequip_par_id
+join equipaevento on parequip_equip_sigla = eqev_equip_sigla
+group by eqev_even_code;
+
+drop view if exists vCalculoPesoPorEvento;
+create view vCalculoPesoPorEvento as
+select eqev_even_code as 'Evento', avg(Peso) as 'Média de peso', max(Peso) as 'Peso máximo', min(Peso) as 'Peso mínimo', stddev(Peso) as 'Desvio padrão' from vAtletaInformacao
+join participanteequipa on ID = parequip_par_id
+join equipaevento on parequip_equip_sigla = eqev_equip_sigla
+group by eqev_even_code;
+
+drop view if exists vCalculoPesoPorProva;
+create view vCalculoPesoPorProva as
+select res_prov_id as 'Prova', avg(atlet_peso) as 'Média do peso',max(atlet_peso) as 'Peso máximo', min(atlet_peso) as 'Peso mínimo', stddev(atlet_peso) as 'Desvio padrão' from resultados
+join atleta on res_atlet_par_id = atlet_par_id
+group by res_prov_id;
+
+drop view if exists vCalculoAlturaPorProva;
+create view vCalculoAlturaPorProva as
+select res_prov_id as 'Prova', avg(atlet_altura) as 'Média da altura',max(atlet_altura) as 'Altura máxima', min(atlet_altura) as 'Altura mínima', stddev(atlet_altura) as 'Desvio padrão' from resultados
+join atleta on res_atlet_par_id = atlet_par_id
+group by res_prov_id;
+
+drop view if exists vCalculoPontuacaoPorProva;
+create view vCalculoPontuacaoPorProva as
+select res_prov_id as 'Prova', avg(res_pontuacao) as 'Média de pontuação', max(res_pontuacao) as 'Pontuação máxima', min(res_pontuacao) as 'Pontuação mínima', stddev(res_pontuacao) as 'Desvio padrão'
+ from resultados
+ group by res_prov_id;
+
+drop view if exists vParticipanteNumMedalhas;
+create view vParticipanteNumMedalhas as
+select par_id as 'ID',par_nome as 'Nome Completo', atlet_peso as 'Peso'
+, atlet_altura as 'Altura', func_getIdade(par_dnsc) as 'Idade',
+res_classificacao as 'Classificação', res_prov_id as 'ID Prova',
+count(*) 'Nº Medalhas'
+from resultados
+join atleta on atlet_par_id = res_atlet_par_id
+join participante on atlet_par_id = par_id
+where res_classificacao <= 3
+group by par_id;
 
 -- PROCEDURES
 
@@ -193,20 +243,6 @@ begin
 	insert into prova(prov_localizacao, prov_data, prov_duracao, prov_even_code, prov_mod_code
     , prov_freg_codigo, prov_conc_codigo, prov_conc_dist_codigo)
     values(localiz, provDate, provDuracao, evenCode, modCode, fregCode, concCod, distCod);
-end $$
-delimiter ;
-
-drop procedure if exists sp_adicionar_classificacao_prova;
-delimiter $$
-create procedure sp_adicionar_classificacao_prova(
-	in classificao int,
-    in parId int,
-    in provId int,
-    in pontuacao float
-)
-begin
-	insert into resultados(res_classificacao, res_atlet_par_id, res_prov_id, res_pontuacao)
-    values(classificao, parId, provId, pontuacao);
 end $$
 delimiter ;
 
@@ -316,7 +352,7 @@ begin
     from resultados
     join atleta on atlet_par_id = res_atlet_par_id
     join participante on atlet_par_id = par_id
-    where par_id = 6
+    where par_id = parId
     group by func_getMedalha(res_classificacao);
 end $$
 delimiter ;
