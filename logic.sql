@@ -96,6 +96,22 @@ from equipa
 join participanteequipa on parequip_equip_sigla = equip_sigla
 join participante on parequip_par_id = par_id;
 
+drop view if exists vNaoParticiparam;
+create view vNaoParticiparam as
+select par_id as 'ID',par_nome as 'Nome Completo',par_sexo as 'Sexo',
+par_dnsc as 'Data de Nascimento',func_getIdade(par_dnsc) as 'Idade',
+ifnull(par_aloj_morada, '(Sem Alojamento)') as 'Morada' from resultados
+right join atleta on res_atlet_par_id = atlet_par_id
+join participante on atlet_par_id = par_id
+where res_prov_id is null;
+
+drop view if exists vCalculoAreaAlojamento;
+create view vCalculoAreaAlojamento as
+select aloj_tipol_tipologia as 'Tipologia', avg(aloj_area) 'Média de área',
+max(aloj_area) 'Área máxima', min(aloj_area) 'Área mínima', stddev(aloj_area) 'Desvio Padrão'
+ from alojamento
+ group by aloj_tipol_tipologia;
+
 -- PROCEDURES
 
 drop procedure if exists sp_criar_caracteristica;

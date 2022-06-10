@@ -109,6 +109,10 @@ select * from vResultadosOrdenado
 where Lugar <= 3;
 
 -- Lista de participantes que não participaram em qualquer prova
-select * from resultados; 
+select * from vNaoParticiparam;
 
+-- Lista organizada por tipologia, com área média, mínima, máxima e desvio de padrão
+select * from vCalculoAreaAlojamento;
+
+-- Lista 
 
