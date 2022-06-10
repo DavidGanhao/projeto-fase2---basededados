@@ -457,6 +457,24 @@ insert into participante values('F','Adele Joana Doidinho',null,'1978-7-3',null)
 insert into participante values('M','Miguel João Veríssimo',null,'1980-12-24',null);
 insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10','Rua do João, Nº33, 1ºE');
 insert into participante values('F','Rute Tiago da Concentra',null,'1992-11-3',null);
+
+insert into participante values('M', 'Pedro Salazar Saramago',null,'1997-6-5',null);
+insert into participante values('M', 'António Vasco Salmão',null, '1999-8-21',null);
+insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
+insert into participante values('F', 'Helena Vasconcelos Ramalho',null, '2002-6-3',null);
+insert into participante values('F', 'Jasmina Carlota de Portalegre',null, '2003-4-7',null);
+insert into participante values('M', 'Flávio Pedrogão Silves',null, '2004-6-1',null);
+insert into participante values('F', 'Mariana Clara De Horta',null, '2002-1-10',null);
+insert into participante values('M', 'Martim Afonso Narciso',null, '1996-2-20',null);
+insert into participante values('M', 'João Carlos Silvino',null, '2002-4-8',null);
+insert into participante values('F', 'Carolina Deslandes De Sintra',null, '2001-6-2',null);
+insert into participante values('M', 'António Carlos Ganhão',null, '1999-9-9',null);
+insert into participante values('F', 'Joana Santos Sottomayor',null, '1996-5-5',null);
+insert into participante values('F', 'Beatriz Corceiro Silva',null, '2001-8-2',null);
+insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
+insert into participante values('M', 'Emanuel Granacci Silva',null, '2001-7-2',null);
+
+
 -- 12º atleta
 insert into atleta values(80,1.80,1);
 insert into atleta values(74,1.78,2);
@@ -473,6 +491,23 @@ insert into atleta values(75,1.78,12);
 insert into atleta values(76,1.76,13);
 insert into atleta values(81,1.73,14);
 insert into atleta values(76,1.75,15);
+
+insert into atleta values(72,1.86,24); -- adicionado
+insert into atleta values(95,1.92,25); -- adicionado
+insert into atleta values(78,1.87,26); -- adicionado
+insert into atleta values(81,1.83,27); -- adicionado
+insert into atleta values(69,1.73,28); -- adicionado
+insert into atleta values(71,1.75,29); -- adicionado
+insert into atleta values(66,1.70,30); -- adicionado
+insert into atleta values(89,1.98,31); -- adicionado
+insert into atleta values(83,1.99,32); -- adicionado
+insert into atleta values(75,1.79,33); -- adicionado
+insert into atleta values(71,1.81,34); -- adicionado
+insert into atleta values(64,1.68,35); -- adicionado
+insert into atleta values(68,1.72,36); -- adicionado
+insert into atleta values(93,2.00,37);
+insert into atleta values(76,1.87,38);
+
 -- 13º certificados
 insert into certificado values('Certificado de excelência');
 insert into certificado values('Certificado de participação');
