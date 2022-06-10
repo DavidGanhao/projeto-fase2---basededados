@@ -104,4 +104,11 @@ join prova p on e.even_code=p.prov_even_code
 
 -- Lista de alojamentos com uma área superior a 500m2
 
+-- Lista resultados com os primeiros três em cada prova
+select * from vResultadosOrdenado
+where Lugar <= 3;
+
+-- Lista de participantes que não participaram em qualquer prova
+select * from resultados; 
+
 

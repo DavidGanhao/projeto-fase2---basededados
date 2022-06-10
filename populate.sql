@@ -446,7 +446,7 @@ insert into participante values('F','Filipa Filipa Manuela',null,'2002-12-20',nu
 insert into participante values('M','Filipe Hugo Manuel',null,'2002-5-30',null);
 insert into participante values('M','Diogo Nuno Avarias',null,'2003-5-1',null);
 insert into participante values('F','Manuela Yuri Forte',null,'2001-3-20',null);
-insert into participante values('M','Raúl Manuel Matos',null,'2001-4-1',null);
+insert into participante values('M','Raúl Manuel Matos',null,'2001-4-1','Rua das Flores, Nº2, 3ºD');
 insert into participante values('M','Jorge Hugo Sacramento',null,'2004-3-21',null);
 insert into participante values('F','Fabiana Sheila Luís',null,'2002-4-17',null);
 insert into participante values('M','André da Silva Caetano',null,'1989-11-9',null);
@@ -455,7 +455,7 @@ insert into participante values('M','Fábio Sousa Martins',null,'1980-2-4',null)
 insert into participante values('M','Fábio Jorge Caetano',null,'1984-10-2',null);
 insert into participante values('F','Adele Joana Doidinho',null,'1978-7-3',null);
 insert into participante values('M','Miguel João Veríssimo',null,'1980-12-24',null);
-insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10',null);
+insert into participante values('F','Joana Maria Ganhão',null,'1994-7-10','Rua do João, Nº33, 1ºE');
 insert into participante values('F','Rute Tiago da Concentra',null,'1992-11-3',null);
 -- 12º atleta
 insert into atleta values(80,1.80,1);
@@ -571,7 +571,7 @@ insert into prova values(
 insert into resultados values(1,4,1,100);
 insert into resultados values(2,6,1,98);
 insert into resultados values(3,2,1,94);
-insert into resultados values(4,8,1,56);
+insert into resultados values(4,7,1,56);
 insert into resultados values(5,1,1,32);
 insert into resultados values(1,1,2,95);
 insert into resultados values(2,14,2,92);
@@ -615,6 +615,6 @@ insert into resultados values(4,1,9,81);
 insert into resultados values(5,2,9,74);
 insert into resultados values(1,7,10,83);
 insert into resultados values(2,2,10,70);
-insert into resultados values(3,8,10,35);
+insert into resultados values(3,3,10,35);
 insert into resultados values(4,10,10,2);
 insert into resultados values(5,15,10,1);
