@@ -43,3 +43,16 @@ begin
     values(classificao, parId, provId, pontuacao);
 end $$
 delimiter ;
+
+drop procedure if exists sp_clonar_prova;
+delimiter $$
+create procedure sp_clonar_prova(
+	in provId int
+)
+begin
+	select *, 'Cópia' from vProvas
+    where IDProva = provId;
+end $$
+delimiter ;
+
+call sp_clonar_prova(2);

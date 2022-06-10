@@ -153,8 +153,8 @@ order by count(*) desc;
 select * from vParticipanteNumMedalhas
 limit 5;
 
-select * from participanteequipa;
-
-
-
-select * from participanteequipa;
+-- Top 5 das provas com maior número de participantes;
+select IDProva, count(IDAtleta) as 'Atletas' from vResultadosOrdenado
+group by IDProva
+order by count(IDAtleta) desc
+limit 5;

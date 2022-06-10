@@ -37,6 +37,13 @@ delimiter ;
 
 -- VIEWS
 
+
+drop view if exists vProvas;
+create view vProvas as
+select prov_id as 'IDProva', prov_localizacao as 'Localização', prov_duracao as 'Duração da prova', prov_data as 'Data da prova', prov_even_code as 'Evento'
+, mod_nome as 'Modalidade', prov_freg_codigo as 'Freguesia', prov_conc_codigo as 'Concelho', prov_conc_dist_codigo as 'Distrito'  from prova
+join modalidade on prov_mod_code = mod_code;
+
 drop view if exists vAtletaInformacao;
 create view vAtletaInformacao as
 select par_id as 'ID', par_nome as 'Nome Completo', par_sexo as 'Sexo',
@@ -53,8 +60,8 @@ par_aloj_morada as 'Alojamento' from participante join treinador on par_id = tre
 
 drop view if exists vResultadosOrdenado;
 create view vResultadosOrdenado as
-select func_getMedalha(res_classificacao) as 'Medalha', res_pontuacao as 'Pontuação',res_atlet_par_id as 'ID Atleta',
- res_classificacao as 'Lugar', res_prov_id 'ID Prova' from resultados
+select func_getMedalha(res_classificacao) as 'Medalha', res_pontuacao as 'Pontuação',res_atlet_par_id as 'IDAtleta',
+ res_classificacao as 'Lugar', res_prov_id 'IDProva' from resultados
  order by res_prov_id, res_classificacao;
 
 drop view if exists vMoradaCaracteristicas;
